@@ -1,0 +1,35 @@
+<!-- <div class="card">
+    <div class="card-body">
+        <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit" novalidate>
+            <div class="text-center">
+                <button class="btn btn-primary mr-3">Submit</button> 
+                <button class="btn btn-danger">Reset</button>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+
+<div class="container table-wrapper-scroll-y my-custom-scrollbar">
+        <h1>View Category</h1>
+    <table class="table table-bordered table-striped mb-0">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Category Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tr" *ngFor="let category of categories;index as i">
+            <td>{{i+1}}</td>
+            <td>{{category.categoryname}}</td>
+            <td><a class="img " routerLink="../editcateg/{{category._id}}"><img src="assets/img/edit.png" alt="Edit" height="50" width="50" title="Edit" > </a> </td>
+            <td><a class="action-btn" (click)="onDelete(category._id)" > <img src="assets/img/delete.jpg"  alt="Delete" height="50" width="50" title="Delete" > </a> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <p>viewfood works!</p> -->

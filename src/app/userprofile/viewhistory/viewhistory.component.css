@@ -1,0 +1,16 @@
+table{
+    background-color: white;
+}
+thead{
+    color: teal;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+tbody{
+    color: rgb(2, 143, 21);
+    font-weight: 600;
+    font-size: larger;
+}
+div h1{
+    color: darkblue;
+}

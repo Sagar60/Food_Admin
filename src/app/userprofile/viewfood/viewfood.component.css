@@ -1,0 +1,31 @@
+tbody{
+    text-align: center;
+    font-weight: 700;
+
+}
+thead{
+    text-align: center;
+}
+td:hover{
+    color: greenyellow ;
+}
+
+.tr:hover{
+    color: darkblue;
+    background-color: darkgrey;
+}
+h1{
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: teal;
+    
+}
+
+a{
+    cursor: pointer;
+}
+
+table{
+    background-color: white;
+}

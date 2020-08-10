@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="">Add Category</h1>
+</div>
+<div class="card m-3">
+    <div class="card-body">
+        <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit(f)" novalidate>
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="model._id" >
+
+            <div class="form-group">
+                <label for="catename">Category Name:</label> 
+                <input type="text" class="form-control" name="categoryname" #catename="ngModel" placeholder="category" [(ngModel)]="model.categoryname" [ngClass]="{ 'is-invalid': f.submitted && catename.invalid }" required>
+                <div class="invalid-feedback" *ngIf="f.submitted && catename.invalid" >
+                    <div *ngIf="catename.errors.required">You Didn't Enter Category Name</div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button type="reset" class="btn btn-info"> Reset </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- 
+<p>addcategory works!</p> -->

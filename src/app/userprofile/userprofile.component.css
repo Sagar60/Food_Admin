@@ -1,0 +1,49 @@
+.img{
+    border-radius: 50%;
+}
+.img1{
+    background-image: url("../../assets/img/backimage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    height: 250vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+}
+
+.li:hover .sub-menu{
+    display: block;
+
+}
+.im1{
+    background: url("../../assets/img/backimage.jpg") repeat fixed 100% ;
+    background-size: cover;
+    background-position: center;
+    
+}
+.a{
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    color: rgb(21, 8, 138);
+    cursor: pointer;
+}
+.red:hover{
+    color: red;
+}
+.col:hover{
+    color: indigo;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 12;
+}
+.dv{
+   padding-top: 80px; 
+}

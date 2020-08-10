@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+thead{
+    color: rgb(255, 217, 0);
+    background-color: rgb(41, 7, 231);
+    text-align: center;
+}
+tbody{
+    color: rgb(10, 165, 185);
+   
+    font-weight: 700;
+    text-align: center;
+}
+.img{
+    border-radius: 50%;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: teal;
+    font-weight: 600;
+    
+}
+
+
+a{
+    cursor: pointer;
+}
+
+td{
+    font-weight: 700;
+    font-size: larger;
+}
+.tr:hover{
+    color: saddlebrown;
+    
+    background-color: lightgray;
+}
+table{
+    background-color: white;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+h1{
+    font-family: 'Merienda One', cursive;
+    color: rgb(33, 172, 5);
+ 
+}
+/* label{
+    
+    color: red;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    background-color: white; 
+}*/
+label{
+    color: red;
+    font-weight: 700;
+    font-size: x-large;
+}

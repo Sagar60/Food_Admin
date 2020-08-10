@@ -1,0 +1,53 @@
+<br><br>
+<div>
+    <img src="assets/img/images.jpg" alt="userSingUp" height="150" width="150" >
+</div>
+<br>
+
+  <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+
+    <div class="form-group">
+    <input class="form-control" type="text" autofocus #fullName="ngModel" [(ngModel)]="model.fullName" name="fullName" placeholder="Full Name"
+    required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">
+    <div *ngIf="signUpForm.submitted && !fullName.valid">
+      <label class="validation-message">This field is required.</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input class="form-control" type="text"  #email="ngModel" [(ngModel)]="model.email" name="email" placeholder="Email"
+    required [pattern]="emailRegex"  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+    <div *ngIf="signUpForm.submitted && email.errors">
+      <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+      <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input class="form-control" type="password" #password="ngModel" [(ngModel)]="model.password" name="password" placeholder="Password"
+    minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+    <div *ngIf="signUpForm.submitted && password.errors">
+      <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+      <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <input class="button btn btn-secondary " type="submit" value="SIGN UP">
+  </div>
+
+  </form>
+
+  <br>
+  <!-- Success message -->
+
+  <!-- Do this if you want to simple Error Msg seeing in div tag -->
+
+  <!-- <div class="success bg-warning" *ngIf="showSucessMessage">
+    Saved successfully
+  </div>-->
+
+  <!-- Error message
+ <div class="alert bg-danger" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+  </div> --> 

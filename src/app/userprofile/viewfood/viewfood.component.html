@@ -1,0 +1,42 @@
+<!-- <div class="card">
+    <div class="card-body">
+        <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit" novalidate> 
+            <div class="text-center">
+            <button class="btn btn-primary mr-3">Submit</button>
+            <button class="btn btn-danger">Reset</button>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+<div class="container">
+    <h1>View Foods</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Food Name</th>
+                <th>Food Description</th>
+                <th>Food Picture</th>
+                <th>Food Price</th>
+                <th>Food Category</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tr" *ngFor="let food of foods; index as i">
+                <td>{{i+1}}</td>
+                <td>{{food.fname}}</td>
+                <td>{{food.fdesc}}</td>
+                <td><img [src]="getpic(food.fpic)" height="53" width="130" alt="Food Pic"> </td>
+                <td>{{food.fprice}}</td>
+                <td>{{food.category_id}}</td>
+                <td><a routerLink="../editfood/{{food._id}}"><img src="assets/img/edit.png" alt="Edit Food" height="50" width="50"> </a> </td>
+                <td> <a class="action-btn" (click)="onDelete(food._id)"><img src="assets/img/delete.jpg" alt="Delete Food" height="50" width="50"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- <p>viewfood works!</p> -->

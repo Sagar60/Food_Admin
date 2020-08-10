@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Update Category</h1>
+</div>
+    <div class="card m-3">
+        <div class="card-body ">
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onEdit(f)" novalidate>
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="selectCat._id">
+            <div class="form-group" >
+                    <label for="newdata">New Category Name</label> 
+                    <input type="text" class="form-control" name="categoryname" #newdata="ngModel" [(ngModel)]="selectCat.categoryname" [ngClass]="{ 'is-invalid': f.submitted && newdata.invalid }" required>
+                    <div class="invalid-feedback" *ngIf="f.submitted && newdata.invalid" >
+                        <div *ngIf="newdata.errors.required">It's required</div>
+                    </div>
+                </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary">Submit</button>
+                <!-- <button type="reset" class="btn btn-info"> Reset </button> -->
+            </div>
+
+        </form>
+</div>
+
+</div>
+<!-- <p>editcategory works!</p> -->

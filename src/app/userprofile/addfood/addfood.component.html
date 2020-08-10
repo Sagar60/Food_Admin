@@ -1,0 +1,60 @@
+<div class="card  m-3 div1">
+    <h1 class="card-header h1">{{userName.fullName.split(' ')[0]}}'s Food Shop</h1>
+    <div class="card-body">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm"  novalidate>
+        <input type="hidden" name="_id" id="_id" [(ngModel)]="model._id" #_id="ngModel" >
+
+        <div class="form-group">
+              <label for="foodname">Enter Food Name:</label>
+              <input name="foodname" #foodname="ngModel" [(ngModel)]="model.fname" type="text" class="form-control" [ngClass]="{ 'is-invalid': f.submitted && foodname.invalid }" placeholder="Food Name"  required>
+              <div *ngIf="f.submitted && foodname.invalid" class="invalid-feedback" >
+                <div *ngIf="foodname.errors.required">Food Name is required</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="foodesc">Food Description:</label>
+              <input type="text" name="fooddesc" #fooddesc="ngModel" [(ngModel)]="model.fdesc" placeholder="Food Descripton" class="form-control" [ngClass]="{'is-invalid': f.submitted && fooddesc.invalid}" required>
+                <div *ngIf="f.submitted && fooddesc.invalid" class="invalid-feedback">
+                  <div *ngIf="fooddesc.errors.required">Food Description is required</div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+              <label for="fpic">Photo:</label> &nbsp;
+                <input type="file" name="foodpic" #fpic="ngModel" accept="image/*" [(ngModel)]="model.fpic"  (change)="onSelectedFile($event)" required>
+            </div>
+
+
+            <div class="form-group ">
+                <label for="foodprice">Food Price:</label>
+                <input type="number" name="foodprice" class="form-control" placeholder="Food Price" #foodprice="ngModel" [(ngModel)]="model.fprice" [ngClass]="{ 'is-invalid': f.submitted && foodprice.invalid } " required>
+                 <div *ngIf="f.submitted && foodprice.invalid" class="invalid-feedback">
+                  <div *ngIf="foodprice.errors.required">Food price is required</div>
+                </div>
+          </div>
+
+          <div class="form-group">
+            <label for="category_id">Food Category</label>
+              <select [(ngModel)]="model.category_id" name="category_id" #category_id="ngModel" class="form-control"  [ngClass]="{ 'is-invalid': f.submitted && category_id.invalid } " required>
+                  <option [selected]="model.category_id == 'select'" [value]="'select'">Select Category</option>
+                  <option *ngFor="let cat of category " [value]="cat.categoryname">{{cat.categoryname}}</option>
+              </select>
+
+                 <div *ngIf="f.submitted && category_id.invalid" class="invalid-feedback">
+                  <div *ngIf="category_id.errors.required">Food Category is required</div>
+                </div>
+          </div>
+
+          <div class="text-center">
+            <button  class="btn btn-primary mr-2" >Submit</button>
+            <button type="reset" class="btn btn-secondary" type="reset" >Reset</button>
+          </div>
+     </form>
+    </div>
+  </div>
+
+
+<!-- <p>addfood works!</p> -->
+

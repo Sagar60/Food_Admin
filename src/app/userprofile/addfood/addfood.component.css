@@ -1,0 +1,11 @@
+h1{
+    color: teal;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1cm;
+    font-weight: 700;
+    
+    text-align: center;
+}
+.div1{
+    box-shadow: 10px 10px 10px 10px #54680b;
+}

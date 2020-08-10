@@ -1,0 +1,10 @@
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: indigo;
+    font-weight: 700;
+    padding-left: 10%;
+}
+img{
+    border: 5px solid black;
+    padding: 8px 8px ;
+}

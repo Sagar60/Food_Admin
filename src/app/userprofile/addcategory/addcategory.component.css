@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap');
+h1{
+    font-family: 'Times New Roman', Times, serif;
+     text-transform: capitalize;
+     font-weight: 600;
+     
+     color: teal;
+}
+label{
+    color: red;
+    font-weight: 700;
+    font-size: larger;
+}
