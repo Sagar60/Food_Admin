@@ -3,7 +3,7 @@ import { UserService } from '../../shared/user.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 // import Swal from 'sweetalert2/dist/sweetalert2.js';
-import swal from 'sweetalert';
+//import swal from 'sweetalert';
 
 @Component({
   selector: 'app-singin',
