@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/user.service';
 import { Router } from '@angular/router';
-import swal from 'sweetalert';
+//import swal from 'sweetalert';
 
 // npm install sweetalert --save  
 
